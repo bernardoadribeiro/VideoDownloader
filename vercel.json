@@ -9,5 +9,10 @@
             "src": "/(.*)",
             "dest": "config/wsgi.py"
         }
-    ]
+    ],
+  "redirects": [
+    { "source": "/ads.txt", "destination": "/static/ads.txt" }
+  ]
+
+
 }
