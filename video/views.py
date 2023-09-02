@@ -53,9 +53,6 @@ class IndexView(TemplateView):
         response = await asyncio.to_thread(downloader, video_url, formato)
         return response
     
-    async def put(self, request):
-        search_query = request.PUT.get('search_query')
-        results = search_videos(search_query)
 
 
 class VideoView(TemplateView):

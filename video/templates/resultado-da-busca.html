@@ -9,23 +9,12 @@
     <div class="text-center mt-5">
         <!-- Formulario de Busca -->
         <h2>Pesquise o vídeo que deseja</h2>
-        <form async method="POST" class="d-flex justify-content-center mt-3">
-            {% csrf_token %}
-            <div class="col-sm-8 col-md-6 col-lg-5">
-                <input class="form-control form-control-sm mb-2" type="text" placeholder="Insira o link do vídeo que deseja baixar" aria-label="Pesquisar" name="video_url" required>
+
+        <form class="d-flex justify-content-center mt-3">
+            <div class="col-sm-8 col-md-6 col-lg-7">
+                <input class="form-control form-control-sm me-2" type="search" placeholder="Funcionalidade em desenvolvimento..." aria-label="Pesquisar" name="search_term">
             </div>
-            <div class="col-sm-8 col-md-6 col-lg-2">
-                <select class="form-select form-select-sm mb-2 mx-3" aria-label="Selecione o formato" name="formato" required>
-                    <option selected>Selecione o formato</option>
-                    <option value="mp3" selected> MP3 128k</option>
-                    <option value="mp4"> MP4 </option>
-                    <!--
-                    <option value="mp4-720p">MP4 720p</option>
-                    <option value="mp4-480p">MP4 480p</option>
-                    -->
-                </select>
-            </div>
-            <button class="btn btn-custom btn-sm mx-4" type="submit" onclick="dataLayer.push({'event': 'download-btn'});">Baixar</button>
+            <button class="btn btn-custom btn-sm mx-3" type="submit" id="btnBuscar" onclick="gtag('event', 'search_button', {'event_category': 'Button','event_label': 'Search Button'});"> Buscar </button>
         </form>
         <!-- Fim Formulario de Busca -->
     </div>
