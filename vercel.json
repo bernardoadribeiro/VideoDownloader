@@ -12,7 +12,7 @@
     ],
     "rewrites": [
             {
-                "source": "/ads.txt", // Define o padrão de URL que será redirecionado para o proxy
+                "source": "/ads.txt",
                 "destination": "https://video-downloader-topaz.vercel.app/static/ads.txt" // Define o destino do proxy, incluindo o uso de grupos de captura ($1) para manter partes da URL original
         }
     ]
